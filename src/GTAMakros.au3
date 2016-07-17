@@ -3,7 +3,7 @@
 #AutoIt3Wrapper_Outfile=..\build\GTAMakros-32bit.Exe
 #AutoIt3Wrapper_Outfile_x64=..\build\GTAMakros-64bit.Exe
 #AutoIt3Wrapper_Compression=4
-#AutoIt3Wrapper_Res_Fileversion=0.0.0.6
+#AutoIt3Wrapper_Res_Fileversion=0.0.0.7
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 
@@ -23,8 +23,8 @@ HotKeySet("{PAUSE}", "PausierenBzwEntpausieren")
 HotKeySet("{END}", "Beenden")
 
 ;SPEZIFISCH - - RUFE FUNKTION AUF, WENN BUTTON GEDRÜCKT
-HotKeySet("{NUMPADMULT}", "TakeArmour")
-HotKeySet("{NUMPADMULT}", "BuyArmour")
+HotKeySet("{NUMPADMULT}", "TakeHeavyArmor")
+HotKeySet("{NUMPADADD}", "BuyArmor")
 
 
 ;ENDLOSSCHLEIFE, DAMIT DAS SCRIPT UNENDLICH LANG LÄUFT, SOLANG ES NICHT BEENDET WIRD
@@ -59,7 +59,13 @@ Func Beenden()
 EndFunc
 
 
-Func TakeArmour()
+
+Func BuyArmor()
+
+EndFunc
+
+
+Func TakeHeavyArmor()
 
 	 ;Verzögerung zwischen den Tasteneingaben in Millisekunden
 	 Local $verzoegerung = 100
