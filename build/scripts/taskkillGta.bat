@@ -1,0 +1,1 @@
+taskkill /f /im gta5.exe

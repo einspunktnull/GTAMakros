@@ -3,7 +3,7 @@
 #AutoIt3Wrapper_Outfile=..\build\GTAMakros-32bit.Exe
 #AutoIt3Wrapper_Outfile_x64=..\build\GTAMakros-64bit.Exe
 #AutoIt3Wrapper_Compression=4
-#AutoIt3Wrapper_Res_Fileversion=0.0.0.7
+#AutoIt3Wrapper_Res_Fileversion=0.0.0.8
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 
@@ -24,6 +24,7 @@ HotKeySet("{END}", "Beenden")
 
 ;SPEZIFISCH - - RUFE FUNKTION AUF, WENN BUTTON GEDRÜCKT
 HotKeySet("{NUMPADMULT}", "TakeHeavyArmor")
+HotKeySet("{NUMPADDIV}", "KillGta")
 HotKeySet("{NUMPADADD}", "BuyArmor")
 
 
@@ -58,6 +59,13 @@ Func Beenden()
 	Exit
 EndFunc
 
+
+
+
+
+Func KillGta()
+ Run(".\scripts\taskkillGta.bat")
+EndFunc
 
 
 Func BuyArmor()
