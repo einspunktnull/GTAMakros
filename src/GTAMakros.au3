@@ -3,7 +3,7 @@
 #AutoIt3Wrapper_Outfile=..\build\GTAMakros-32bit.Exe
 #AutoIt3Wrapper_Outfile_x64=..\build\GTAMakros-64bit.Exe
 #AutoIt3Wrapper_Compression=4
-#AutoIt3Wrapper_Res_Fileversion=0.0.0.8
+#AutoIt3Wrapper_Res_Fileversion=0.0.0.9
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=y
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 
@@ -26,6 +26,7 @@ HotKeySet("{END}", "Beenden")
 HotKeySet("{NUMPADMULT}", "TakeHeavyArmor")
 HotKeySet("{NUMPADDIV}", "KillGta")
 HotKeySet("{NUMPADADD}", "BuyArmor")
+HotKeySet("{NUMPADSUB}", "playSound")
 
 
 ;ENDLOSSCHLEIFE, DAMIT DAS SCRIPT UNENDLICH LANG LÄUFT, SOLANG ES NICHT BEENDET WIRD
@@ -64,8 +65,13 @@ EndFunc
 
 
 Func KillGta()
- Run(".\scripts\taskkillGta.bat")
+	Run(".\scripts\taskkillGta.bat")
 EndFunc
+
+Func PlaySound()
+	SoundPlay(".\media\alert.mp3")
+EndFunc
+
 
 
 Func BuyArmor()
